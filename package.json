@@ -1,7 +1,7 @@
 {
 	"name": "awwwards-melriver",
 	"version": "0.1.0",
-	"description": "Rebuilding melriver.com, a website featured on awwwards.com",
+	"description": "Recreating melriver.com, a website featured on awwwards.com",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.14.1",
