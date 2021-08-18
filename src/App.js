@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Banner from './components/Banner';
 import Cases from './components/Cases';
 import Header from './components/Header';
+import IntroOverlay from './components/IntroOverlay';
 import './styles/App.scss';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
 	return (
 		<div className='App'>
+			<IntroOverlay />
 			<Header />
 			<Banner />
 			<Cases />
