@@ -1,6 +1,6 @@
 .cases {
 	height: 50vh;
-	height: calc(var(--vh, 1vh) * 50);
+	// height: calc(var(--vh, 1vh) * 50);
 
 	&-navigation {
 		position: absolute;
@@ -44,9 +44,8 @@
 			position: relative;
 			background-color: $black;
 			cursor: pointer;
-
 			&:hover {
-				case-image {
+				.case-image {
 					opacity: 0.4;
 				}
 			}
@@ -54,7 +53,7 @@
 			&-details {
 				width: calc(100vw / 3);
 				height: 50vh;
-				height: calc(var(--vh, 1vh) * 50);
+				// height: calc(var(--vh, 1vh) * 50);
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
