@@ -1,7 +1,7 @@
 .intro-overlay {
 	.top {
 		height: 50vh;
-		// height: calc(var(--vh, 1vh) * 50);
+		height: calc(var(--vh, 1vh) * 50);
 		position: absolute;
 		width: 100%;
 		z-index: 8;
@@ -38,7 +38,7 @@
 	}
 	.bottom {
 		height: 50vh;
-		// height: calc(var(--vh, 1vh) * 50);
+		height: calc(var(--vh, 1vh) * 50);
 		position: absolute;
 		width: 100%;
 		bottom: 0;

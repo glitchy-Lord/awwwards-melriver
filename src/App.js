@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { Route } from 'react-router-dom';
 
-import Header from './components/Header';
 import './styles/App.scss';
+
+// components
+import Header from './components/Header';
+import Navigation from './components/Navigation';
 
 // pages
 import Home from './pages/Home';
@@ -21,19 +24,51 @@ const routes = [
 	{ path: '/about-us', name: 'About Us', Component: About },
 ];
 
+function debounce(fn, ms) {
+	let timer;
+	return () => {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			timer = null;
+			fn.apply(this, arguments);
+		}, ms);
+	};
+}
+
 function App() {
+	const [dimensions, setDimensions] = useState({
+		height: window.innerHeight,
+		width: window.innerWidth,
+	});
+
 	useEffect(() => {
 		// Grab inner height of window for mobile reasons when dealing with vh
-		let vh = window.innerHeight * 0.01;
+		let vh = dimensions.height * 0.01;
 		// Set css variable vh
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+		const HandleResize = () => {
+			setDimensions({
+				height: window.innerHeight,
+				width: window.innerWidth,
+			});
+		};
+
+		const debouncedHandleResize = debounce(HandleResize, 1000);
+
+		window.addEventListener('resize', debouncedHandleResize);
+
 		// prevents flashing
 		gsap.to('body', 0, { css: { visibility: 'visible' } });
+
+		return () => {
+			window.removeEventListener('resize', debouncedHandleResize);
+		};
 	}, []);
 
 	return (
 		<>
+			{console.log(dimensions)}
 			<Header />
 			<div className='App'>
 				{routes.map(({ path, Component }) => (
@@ -42,6 +77,7 @@ function App() {
 					</Route>
 				))}
 			</div>
+			<Navigation />
 		</>
 	);
 }
