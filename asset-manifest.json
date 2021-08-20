@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/awwwards-melriver/static/css/main.0dc14698.chunk.css",
+    "main.js": "/awwwards-melriver/static/js/main.84460a78.chunk.js",
+    "main.js.map": "/awwwards-melriver/static/js/main.84460a78.chunk.js.map",
+    "runtime-main.js": "/awwwards-melriver/static/js/runtime-main.a27a1182.js",
+    "runtime-main.js.map": "/awwwards-melriver/static/js/runtime-main.a27a1182.js.map",
+    "static/js/2.b17de552.chunk.js": "/awwwards-melriver/static/js/2.b17de552.chunk.js",
+    "static/js/2.b17de552.chunk.js.map": "/awwwards-melriver/static/js/2.b17de552.chunk.js.map",
+    "index.html": "/awwwards-melriver/index.html",
+    "static/css/main.0dc14698.chunk.css.map": "/awwwards-melriver/static/css/main.0dc14698.chunk.css.map",
+    "static/js/2.b17de552.chunk.js.LICENSE.txt": "/awwwards-melriver/static/js/2.b17de552.chunk.js.LICENSE.txt",
+    "static/media/arrow-left.8edfe59d.svg": "/awwwards-melriver/static/media/arrow-left.8edfe59d.svg",
+    "static/media/arrow-right.f030f9db.svg": "/awwwards-melriver/static/media/arrow-right.f030f9db.svg",
+    "static/media/curology-min.png": "/awwwards-melriver/static/media/curology-min.b052d80b.png",
+    "static/media/lumin-min.png": "/awwwards-melriver/static/media/lumin-min.c876698e.png",
+    "static/media/up-arrow-circle.815ca3d1.svg": "/awwwards-melriver/static/media/up-arrow-circle.815ca3d1.svg",
+    "static/media/yourspace-min.png": "/awwwards-melriver/static/media/yourspace-min.f952e744.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a27a1182.js",
+    "static/js/2.b17de552.chunk.js",
+    "static/css/main.0dc14698.chunk.css",
+    "static/js/main.84460a78.chunk.js"
+  ]
+}
