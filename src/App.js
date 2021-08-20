@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import './styles/App.scss';
 
@@ -64,19 +64,20 @@ function App() {
 		return () => {
 			window.removeEventListener('resize', debouncedHandleResize);
 		};
-	}, []);
+	}, [dimensions]);
 
 	return (
 		<>
-			{console.log(dimensions)}
 			<Header dimensions={dimensions} />
-			<div className='App'>
-				{routes.map(({ path, Component }) => (
-					<Route key={path} path={path} exact>
-						<Component />
-					</Route>
-				))}
-			</div>
+			<Switch>
+				<div className='App'>
+					{routes.map(({ path, Component }) => (
+						<Route key={path} path={path} exact>
+							<Component />
+						</Route>
+					))}
+				</div>
+			</Switch>
 			<Navigation />
 		</>
 	);

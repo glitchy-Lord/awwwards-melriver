@@ -1,5 +1,6 @@
 {
 	"name": "awwwards-melriver",
+	"homepage": "https://glitchy-lord.github.io/awwwards-melriver/",
 	"version": "0.1.0",
 	"description": "Recreating melriver.com, a website featured on awwwards.com",
 	"private": true,
@@ -7,6 +8,7 @@
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^11.2.7",
 		"@testing-library/user-event": "^12.8.3",
+		"gh-pages": "^3.2.3",
 		"gsap": "^3.7.1",
 		"node-sass": "^6.0.1",
 		"react": "^17.0.2",
@@ -18,6 +20,8 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
